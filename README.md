@@ -173,16 +173,6 @@ deny, the model receives an error and adapts instead of crashing.
 | One-shot / prompts | `@clack/prompts` + `chalk`    | Inline rendering and approvals for headless runs |
 | Search           | ripgrep                         | Fast recursive code search                       |
 
-## What a "real" agent adds (left as exercises)
-
-This is intentionally minimal. Production agents layer on:
-
-- **Streaming tool execution** while the model is still generating.
-- **Multi-stage context compaction** (summaries + collapse, not one naive pass).
-- **LSP/diagnostics feedback** after edits so the model self-corrects type errors.
-- **MCP client** support to plug in external tool servers.
-- **Session persistence** (e.g. `bun:sqlite`) and resumable conversations.
-- **A rich TUI** (OpenCode built its own; Ink is the easy TS option).
 
 ## Building the same thing in Python
 
@@ -202,6 +192,4 @@ The architecture is identical — only the libraries change:
 The loop, the tool registry, the permission gate, and context compaction are
 exactly the same concepts in either language.
 
-## License
 
-MIT
